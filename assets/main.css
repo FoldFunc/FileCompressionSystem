@@ -1,0 +1,135 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: rgb(9, 9, 9);
+    color: white;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+}
+
+/* Navbar container */
+nav {
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    box-shadow: 0 4px 12px rgba(1, 1, 1, 0.6);
+}
+
+/* Navbar list */
+.navbar {
+    display: flex;
+    justify-content: right;
+    gap: 3rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 2rem;
+}
+
+/* Navbar links */
+.navbar li a {
+    text-decoration: none;
+    color: rgb(155, 196, 188);
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(155, 196, 188);
+    transition: width 0.3s ease;
+}
+
+.navbar li a:hover {
+    color: rgb(200, 255, 240);
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+
+/* Main container for the register form */
+.register-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: rgb(21, 21, 21); /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(1, 1, 1, 0.6);
+    text-align: center;
+    border: 1px solid rgb(155, 196, 188); /* Subtle border color */
+}
+
+/* Heading and description styles */
+.register-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(155, 196, 188); /* Matching color to navbar */
+}
+
+.register-container p {
+    font-size: 1.1rem;
+    color: rgb(155, 196, 188);
+    margin-bottom: 25px;
+}
+
+/* Form input field styles */
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid rgb(75, 80, 67); /* Subtle greenish border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: rgb(30, 30, 30); /* Dark background for inputs */
+    color: white;
+}
+
+.form-input:focus {
+    border-color: rgb(155, 196, 188); /* Focus border color */
+    outline: none;
+    background-color: rgb(40, 40, 40); /* Slightly lighter input focus background */
+}
+
+/* Button styles */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: rgb(75, 80, 67); /* Dark greenish button */
+    border: none;
+    border-radius: 5px;
+    color: rgb(155, 196, 188); /* Light text on dark button */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.submit-btn:hover {
+    background-color: rgb(50, 55, 50); /* Slightly darker button on hover */
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+/* Additional form section spacing */
+.form-input + .form-input {
+    margin-top: 10px;
+}
+
